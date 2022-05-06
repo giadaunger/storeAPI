@@ -1,0 +1,11 @@
+.footer{
+    background-color: #e9c4ca;
+    height: 100px;
+    margin-top: 70px;
+}
+
+.footer-h6{
+    text-align: center;
+    position: relative;
+    top: 80px;
+}

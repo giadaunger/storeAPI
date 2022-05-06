@@ -1,0 +1,25 @@
+.nav-ul{
+    display: flex;
+    list-style: none;
+}
+
+.nav-link{
+    text-decoration: none;
+    margin: 20px;
+    color: black;
+}
+
+.nav-li{
+    margin-top: 30px;
+}
+
+nav{
+    margin-bottom: 70px;
+}
+
+.logo{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #b89298;
+    margin-top: 25px;
+}
