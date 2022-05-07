@@ -1,7 +1,7 @@
 import '../products/product.css'
 import {Link} from 'react-router-dom'
 
-function Products({ data }) {
+function Products({ data, handleAddProduct }) {
   return (
     <div>
         <h1 className='products-h1'>Products</h1>
@@ -13,8 +13,11 @@ function Products({ data }) {
            </Link>
            <div className="card-description">
                <h6>{product.title}</h6>
-               <h6>{`Price: ${product.price}`}</h6>
+               <h6>{`Price: ${product.price} :-`}</h6>
            </div>
+           <div>
+                <button className='add-btn' onClick={() => handleAddProduct(product)}>Add to cart</button>
+            </div>
           </div>
       ))}
     </div>

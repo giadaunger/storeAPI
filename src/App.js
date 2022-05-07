@@ -10,11 +10,24 @@ import Singleproduct from './components/products/Singleproduct';
 import Login from './components/login/Login';
 import Checkout from './components/checkout/Checkout';
 import Footer from './components/footer/Footer';
-
+import Signup from './components/signup/Signin';
+import Profile from './components/profile/Profile';
+import Admin from './components/admin/Admin';
 
 function App() {
 
   const [ data, setData ] = useState([]);
+  const [ cartItems, setCartItems ] = useState([]);
+
+  const handleAddProduct = (product) => {
+    const ProductExist = cartItems.find((item) => item.id === product.id);
+    if(ProductExist) {
+      setCartItems(cartItems.map((item) => item.id === product.id ?
+      {...ProductExist, quantity: ProductExist.quantity + 1}:item));
+    }else {
+      setCartItems([...cartItems, {...product, quantity: 1}]);
+    }
+  }
 
   useEffect(() => {
     axios.get('https://k4backend.osuka.dev/products').then(({ data }) => {
@@ -28,10 +41,13 @@ function App() {
         <Nav />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/products' element={<Products data={data}/>}></Route>
+          <Route path='/products' element={<Products data={data} handleAddProduct={handleAddProduct}/>}></Route>
           <Route path='/products/:id' element={<Singleproduct />}></Route>
           <Route path='/login' element={<Login />}></Route>
           <Route path='/checkout' element={<Checkout />}></Route>
+          <Route path='/signup' element={<Signup />}></Route>
+          <Route path='/profile' element={<Profile />}></Route>
+          <Route path='/admin' element={<Admin />}></Route>
         </Routes>
         <Footer />
       </Router>

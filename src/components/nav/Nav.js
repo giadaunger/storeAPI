@@ -21,6 +21,13 @@ function Nav() {
                 <Link to='/checkout' className='nav-link'>
                     <li className='nav-li'>Checkout</li>
                 </Link>
+
+                <Link to='/admin' className='nav-link'>
+                    <li className='nav-li'>Admin</li>
+                </Link>
+                <Link to='/profile' className='nav-link'>
+                    <li className='nav-li'>Profile</li>
+                </Link>
             </ul>
         </nav>
     </div>

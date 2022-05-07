@@ -1,0 +1,43 @@
+.signup-h1{
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.signup-input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.signup-form-div{
+  max-width: 50ch;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.state-postal-div, .btn-div{
+  display: flex;
+  justify-content: center;
+}
+
+.postal-div, .state-div{
+  display: inline;
+}
+
+.state-postal-input{
+  margin-right: 70px;
+  margin-bottom: 20px;
+}
+
+.signup-btn{
+  width: 30%;
+  margin-right: 20px;
+  background-color: white;
+    border: 3px solid #b89298;
+    font-size: 1em;
+    font-weight: 700;
+    color: #b89298;
+}
+
+.signup-btn:hover{
+  transform: scale(1.1);
+}
