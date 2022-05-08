@@ -12,7 +12,7 @@ function Admin() {
     axios.get('https://k4backend.osuka.dev/users').then(({ data }) => {
       dispatch(setAllUser(data))
     })
-  }, [])  
+  }, [dispatch])  
 
   return (
     <div className="App"> Admin: 

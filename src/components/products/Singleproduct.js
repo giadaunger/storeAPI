@@ -16,7 +16,7 @@ function Singleproduct() {
     axios.get( `https://k4backend.osuka.dev/products/${id}`).then(({ data }) => {
         dispatch(setProduct(data))
       })
-    }, [id]);
+    }, [id, dispatch]);
 
   return (
     <div className="App">

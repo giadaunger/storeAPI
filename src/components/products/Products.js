@@ -28,7 +28,7 @@ function Products() {
     axios.get('https://k4backend.osuka.dev/products').then(({ data }) => {
       dispatch(setProducts(data))
     })
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
