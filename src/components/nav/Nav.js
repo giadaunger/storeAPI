@@ -1,8 +1,8 @@
 import '../nav/nav.css'
 import { Link } from 'react-router-dom';
 import {useSelector, useDispatch} from  'react-redux';
-import {resetProducts} from '../store/products/index'
-import {resetUser} from '../store/user/index'
+import {resetProducts} from '../../store/products/index'
+import {resetUser} from '../../store/user/index'
 function Nav() {
     const user = useSelector(state => state.user.user)
 const dispatch = useDispatch()

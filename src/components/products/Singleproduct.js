@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import {useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import {setProduct} from '../store/products/index';
+import {setProduct} from '../../store/products/index';
 
 function Singleproduct() {
   const product = useSelector(state => state.products.product);

@@ -2,8 +2,8 @@ import {useEffect} from 'react';
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 import {useDispatch, useSelector } from 'react-redux';
-import { setProducts } from '../store/products/index';
-import { setCartItem } from '../store/cart/index';
+import { setProducts } from '../../store/products/index';
+import { setCartItem } from '../../store/cart/index';
 import '../products/product.css'
 
 function Products() {

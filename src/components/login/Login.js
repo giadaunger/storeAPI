@@ -2,7 +2,7 @@ import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import {setUserInfo} from '../store/user/index'
+import {setUserInfo} from '../../store/user/index'
 import { useNavigate } from "react-router-dom";
 import "../login/login.css";
 

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import {setAllUser} from '../store/user/index'
+import {setAllUser} from '../../store/user/index'
 import axios from 'axios';
 
 function Admin() {
