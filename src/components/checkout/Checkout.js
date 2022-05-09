@@ -2,7 +2,7 @@ import {useSelector} from  'react-redux';
 import '../checkout/checkout.css'
 function Checkout() {
   const cartItems = useSelector(state => state.cart.cartItems)
-  
+
   return (
     <div className="App">
       <h1 className='checkout-h1'>Checkout</h1>
@@ -19,7 +19,6 @@ function Checkout() {
           </>
         )
       })}
-      <button>clear cart</button>
     </div>
 
   );
