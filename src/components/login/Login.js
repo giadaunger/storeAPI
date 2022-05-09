@@ -14,7 +14,7 @@ function Login() {
 
     const logInUser = () => {
         axios.post('https://k4backend.osuka.dev/auth/login', {
-            username: "admin", password: "admin"
+            username: user.username, password: user.password
         }).then(res => {
            console.log(res.data.userId) 
             return axios.get(`https://k4backend.osuka.dev/users/${res.data.userId}`)})

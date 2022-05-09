@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import {setAllUser} from '../../store/user/index'
 import axios from 'axios';
+import '../admin/admin.css'
 
 function Admin() {
   const dispatch = useDispatch()
@@ -15,13 +16,23 @@ function Admin() {
   }, [dispatch])  
 
   return (
-    <div className="App"> Admin: 
+    <div className="App"><h1 className='admin-h1'>Admin</h1>
+    <h3 className='admin-h3'>Usres:</h3>
       {allUsers.map(user => {
-        return <p key={user.id} >{user.email}</p>
+        return(
+          <div className='admin-div'>
+            <p key={user.id} className='admin-p'>{user.email}</p>
+          </div>
+        )
+    
       })}
-      -------------------- products -----------------
+      <h3 className='admin-h3'>Products:</h3>
       {products.map(product => {
-        return <p key={product.id}>{product.title}</p>
+        return (
+          <div className='admin-div'>
+            <p key={product.id} className='admin-p'>{product.title}</p>
+          </div>
+        )
       })}
     </div>
   );
